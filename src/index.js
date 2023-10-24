@@ -59,11 +59,22 @@ function Pizza(params) {
 const Header = (params) => {
   return <h1>Fast React Pizza Co.</h1>;
 };
+function Menu(params) {
+  return (
+    <>
+      <h2>Our menu</h2>
+      <Pizza />
+      <Pizza />
+      <Pizza />
+    </>
+  );
+}
 
 function App() {
   return (
     <>
       <Header />
+      <Menu />
     </>
   );
 }
