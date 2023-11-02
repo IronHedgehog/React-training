@@ -71,11 +71,11 @@ const Header = (params) => {
     </header>
   );
 };
-function Menu(params) {
+function Menu() {
   return (
     <main className="menu">
       <h2>Our menu</h2>
-      <Pizza
+      {/* <Pizza
         name="Pizza Spinaci"
         ingredients="Tomato, mozarella, spinach, and ricotta cheese"
         photoName="pizzas/spinaci.jpg"
@@ -86,7 +86,16 @@ function Menu(params) {
         ingredients="Tomato, mushrooms"
         photoName="pizzas/funghi.jpg"
         price="12"
-      />
+      /> */}
+      {pizzaData.map((pizza) => {
+        return (
+          <Pizza
+            name={pizza.name}
+            photoName={pizza.photoName}
+            ingredients={pizza.ingredients}
+          />
+        );
+      })}
     </main>
   );
 }
